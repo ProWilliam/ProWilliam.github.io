@@ -1,0 +1,98 @@
+---
+import './FormStyle.css';
+---
+
+<form id="form-contact">
+  
+  <div class="input-name">
+    <p>
+      Name:
+    </p>
+    <input 
+      type="text" 
+      id="name-user"
+      name="name"
+      placeholder="Enter your name" 
+      class="input-contact-name"
+      required
+    >
+  </div>
+
+  <div class="input-email">
+    <p>
+      Email:
+    </p>
+    <input 
+      type="email" 
+      id="email-user"
+      name="email"
+      placeholder="Enter your email"
+      class="input-contact-email"
+      required
+    >
+  </div>
+
+  <div class="input-message">
+    <p>
+      Message:
+    </p>
+    <textarea 
+      name="message" 
+      id="input-message" 
+      placeholder="Enter your message"
+      required
+    ></textarea>
+  </div>
+
+  <div id="button-send">
+    <input 
+      class="input-send" 
+      type="submit" 
+      value="Send"
+    />    
+  </div>
+
+</form>
+
+<script>
+  const URL_FORM_SEND = import.meta.env.PUBLIC_URL_CONNECT_EMAIL;
+  const form = document.querySelector('#form-contact') as HTMLFormElement;
+
+  form?.addEventListener('submit', (event) => {
+    handleSubmit(event as SubmitEvent);
+    form.reset();
+  });
+
+  function handleSubmit(event: SubmitEvent) {
+    event.preventDefault();
+    const formData = new FormData(event.target as HTMLFormElement);
+
+    fechData(formData);
+  }
+
+  async function fechData(dataForm : any) {
+
+    try {
+
+      const response = await fetch(URL_FORM_SEND, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(Object.fromEntries(dataForm))
+      });
+
+      if (response.ok) {
+        console.log('Correo enviado correctamente');
+        
+      } else {
+        console.error('Error al enviar el correo:', response.statusText);
+      }
+      
+    } catch (error) {
+      console.error('Error de red:', error);
+    }
+
+  }
+
+</script>

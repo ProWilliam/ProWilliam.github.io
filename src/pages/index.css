@@ -1,0 +1,17 @@
+.main-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  inline-size: 100vh;
+  padding: 0 25%;
+}
+
+.main-style section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-inline-size: 1000px;
+  block-size: 100vh;
+}
+
+

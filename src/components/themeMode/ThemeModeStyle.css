@@ -1,0 +1,59 @@
+.ckeck-main {
+  position: absolute;
+  inset-inline-end: 1%;
+}
+
+input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+}
+
+.check-mode {
+  position: relative;
+  display: block;
+  inline-size: 60px;
+  block-size: 30px;
+  background: var(--color-secondary);
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: ease-in 0.5s;
+}
+
+input[type="checkbox"]:checked ~ .check-mode {
+  background: var(--color-tertiary-dark);
+}
+
+/* Animation click on the element  */
+.check-mode:before {
+  content: '';
+  position: absolute;
+  inset-block-start: 3px;
+  inset-inline-start: 3px;
+  background: var(--color-white);
+  inline-size: 25px;
+  block-size: 25px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+input[type="checkbox"]:checked ~ .check-mode:before {
+  transform: translate(-50px);
+}
+
+.check-mode:after {
+  content: '';
+  position: absolute;
+  inset-block-start: 3px;
+  inset-inline-start: 3px;
+  background: var(--color-white);
+  inline-size: 25px;
+  block-size: 25px;
+  border-radius: 50%;
+  transition: 0.5s;
+  transform: translate(60px);
+}
+
+input[type="checkbox"]:checked ~ .check-mode:after {
+  transform: translate(30px);
+}

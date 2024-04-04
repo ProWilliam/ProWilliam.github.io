@@ -1,0 +1,64 @@
+---
+import { Icon } from 'astro-icon/components'
+import './HeaderStyle.css';
+import ThemeMode from '../themeMode/ThemeMode.astro';
+
+const URL_IMAGE = import.meta.env.PUBLIC_URL_IMAGE_PROFILE;
+
+---
+
+<header class="header-style">
+	<div class="items-nav">
+		<img 
+			class="profil-photo"
+			src={URL_IMAGE}
+			alt="William photo"
+		/>
+		<nav class="nav-style">
+			<a href="#">Home</a>
+			<a href="#about">About</a>
+			<a href="#projects">Projects</a>
+			<a href="#contact">Contact</a>
+			<ThemeMode />
+		</nav>
+	</div>
+	<div class="mobile-menu" >
+		<div class="menu-toggle" id="menuToggleOpen">
+			<Icon 
+				name="menu"
+				size={70}
+			/>
+		</div>
+		<div class="menu-items" id="menuItems" hidden="false">
+			<Icon 
+				name="close"
+				size={70}
+				id="menuToggleClose"
+			/>
+			<a href="#">Home</a>
+			<a href="#about">About</a>
+			<a href="#projects">Projects</a>
+			<a href="#contact">Contact</a>
+		</div>
+	</div>
+</header>
+
+<script>
+	const buttonToggleOpen = document.getElementById('menuToggleOpen');
+	const buttonToggleClose = document.getElementById('menuToggleClose');
+	const menu = document.getElementById('menuItems');
+
+	buttonToggleOpen?.addEventListener('click', () => {
+		if(menu) {
+			menu.style.display = 'grid';
+		}
+	});
+
+	buttonToggleClose?.addEventListener('click', () => {
+		if(menu){
+			menu.style.display = 'none';
+		}
+	});
+	
+</script>
+

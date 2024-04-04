@@ -1,0 +1,44 @@
+.input-contact-name, .input-contact-email {
+  inline-size: 98%;
+  block-size: 2rem;
+  border: 1px solid #f6f6f6;
+  border-radius: 6px;
+  background-color: #f6f6f6;
+  margin: 8px 0;
+  padding-inline-start: 10px;
+  display: inline-block;
+  font-size: 26px;
+  font-family: monospace;
+}
+
+#input-message {
+  inline-size: 100%;
+  block-size: 150px;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  font-size: 26px;
+  resize: none;
+}
+
+.input-send {
+  inline-size: 100%;
+  margin-block-start: 20px ;
+  padding: 10px 20px;
+  background-color: #45a049;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 26px;
+}
+
+.input-send:hover {
+  background-color: #29331e;
+  place-content: 'setting';
+}
+
+.input-send:active {
+  background-color: #3e8e41;
+}

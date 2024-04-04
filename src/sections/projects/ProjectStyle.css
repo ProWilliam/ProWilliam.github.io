@@ -1,0 +1,57 @@
+
+.section-projects {
+	max-inline-size: 100%;
+	margin: 0 ;
+  display: flex;
+}
+
+.title-projects {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 2rem;
+  color: white;
+
+  margin-inline-start: -80px;
+}
+
+.title-projects h2 {
+  margin: 0;
+}
+
+
+.info-project h3 {
+  color: white;
+  font-size: 2rem;
+}
+
+.info-project p {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.list-technologies {
+  display: flex;
+  max-inline-size: 100%;
+  flex-wrap: wrap;
+  gap: 15px;
+  color: white;
+  font-size: 1.5rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-technologies li {
+  padding: 0 10px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+.list-technologies li:hover {
+  color: green;
+}
+
+@media screen and (max-width: 600px) {
+  .section-projects { 
+    margin-block-start: 100px;
+  }
+}

@@ -1,0 +1,51 @@
+---
+import Badge from '../../components/badge/Badge.astro';
+import SocialMedia from '../../components/socialMedia/SocialMedia.astro';
+import './HomeStyle.css';
+import { Icon } from 'astro-icon/components';
+---
+
+<section class="section-home">
+  
+  <div class="title-home">
+    <Icon name="message-home" size={70}/>
+    <h1>
+      Hi, I'm William Toro 
+      <div class="badge-home">
+        <Badge>
+          Available to Work
+        </Badge>
+      </div>
+    </h1>
+  </div>
+  
+  <p>
+      <strong>
+        +4 years of experience.
+        <br/> 
+        Web developer | Desktop applications | Pentester.
+        <br/>
+      </strong>
+      <div class="text-info">
+        From medellin colombia. Committed to creating automated applications, dynamic websites, and interactive web pages.
+      </div>
+  </p>
+
+  <div class="social-media">
+    <SocialMedia 
+      href="https://www.linkedin.com/in/prowilliamtoromartinez/"
+    >
+      <Icon name="linkedin" size={30}/>
+      Linkedin
+    </SocialMedia>
+    <SocialMedia href="https://github.com/ProWilliam">
+      <Icon name="github" size={30}/>
+      GitHub
+    </SocialMedia>
+    <SocialMedia>
+      <Icon name="mail" size={30}/>
+      pro.williamtoro@gmail.com
+    </SocialMedia>
+  </div>
+  
+</section>

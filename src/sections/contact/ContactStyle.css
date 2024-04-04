@@ -1,0 +1,43 @@
+#contact {
+  margin-block-start: 5rem;
+}
+
+.section-contact {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 20px;
+}
+
+.title-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 2rem;
+  color: white;
+
+  margin-inline-start: -80px;
+}
+
+.title-contact h2 {
+  margin: 0;
+}
+
+.info-text-contact {
+  display: flex;
+  align-items: center;
+}
+
+.contact-form {
+  background-color: #3F4E2E;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 676px) {
+  .section-contact {
+    grid-template-columns: 100%;
+    grid-gap: 20px;
+  }
+}
+
+

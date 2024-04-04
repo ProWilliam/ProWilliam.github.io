@@ -1,0 +1,46 @@
+---
+import { Icon } from 'astro-icon/components';
+import Slider from '../../components/slider/Slider.astro'
+import './ProjectStyle.css';
+---
+
+<section class="section-projects" id="projects">
+  <div class="title-projects">
+    <Icon name="code" size={70}/>
+    <h2>
+      Projects
+    </h2>
+  </div>
+  <div class="info-project">
+    <h3>
+      E-commerce Dashboard: Powered by MEAN Stack.
+    </h3>
+    <p>
+      Developed using the MEAN stack, incorporating Bootstrap 4 and JWT authentication. Integration with PAYU allows for automatic purchases, whether with an account or without, within a dashboard interface. Real-time updates are facilitated through sockets for alerts and shopping cart functionality.
+    </p>
+    <ul class="list-technologies">
+      <li>
+        MongoDB
+      </li>
+      <li>
+        Expres.js
+      </li>
+      <li>
+        Angular
+      </li>
+      <li>
+        Node.js
+      </li>
+      <li>
+        TypeScript
+      </li>
+      <li>
+        WebSockets
+      </li>
+      <li>
+        Linux
+      </li>
+    </ul>
+  </div>
+  <Slider />
+</section>

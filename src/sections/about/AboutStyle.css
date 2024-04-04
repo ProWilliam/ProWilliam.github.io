@@ -1,0 +1,25 @@
+.title-about-me {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 2rem;
+  color: white;
+
+  margin-inline-start: -80px;
+}
+
+.about-me p {
+  color: white;
+  opacity: 70%;
+}
+
+.about-me strong {
+  color: green;
+}
+
+.about-me strong:hover { 
+  color: yellow;
+  border-radius: 4px;
+  border: solid;
+  padding: 0 2px;
+}

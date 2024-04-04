@@ -1,0 +1,37 @@
+---
+import './ThemeModeStyle.css';
+---
+
+<label class="ckeck-main">
+  <input id="darkChecked" type="checkbox">
+  <span class="check-mode"></span>
+</label>
+
+<script>
+  const checkMode = document.getElementById('darkChecked');
+  const body = document.querySelector('body');
+
+  load();
+
+  checkMode?.addEventListener('change', () => {
+    body?.classList.toggle('theme-dark');
+    const valueMode = body?.classList.contains("theme-dark") 
+                      ? 'true' : "false";
+    store(valueMode);
+  });
+
+  function load() {
+    const darkmode = localStorage.getItem('theme-dark');
+
+    if(darkmode == "false"){
+      store('false');
+    }else if(darkmode == "true") {
+      body?.classList.add("theme-dark");
+    }
+  }
+
+  function store(theme: string) {
+    localStorage.setItem('theme-dark', theme);
+  }
+
+</script>

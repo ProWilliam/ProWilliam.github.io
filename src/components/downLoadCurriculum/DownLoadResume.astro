@@ -1,0 +1,15 @@
+---
+import CvPdf from '../../download/Resume.pdf';
+import { Icon } from 'astro-icon/components';
+import './DownLoadResumeStyles.css';
+---
+
+
+<a 
+  class="Download-button"
+  href={CvPdf} 
+  download="CV-William-Toro.pdf"  
+>
+  <Icon name="download" size={30} />
+  <span>CV</span>
+</a>

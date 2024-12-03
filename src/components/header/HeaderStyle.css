@@ -96,7 +96,7 @@ a:hover {
 
   [data-icon= "close"] {
     position: absolute;
-    margin-inline-start: 90%;
+    margin-inline-start: 80%;
     margin-block-start: 12%;
     color: white;
   }

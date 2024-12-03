@@ -1,7 +1,8 @@
 ---
 import { Icon } from 'astro-icon/components'
 import './HeaderStyle.css';
-import ThemeMode from '../themeMode/ThemeMode.astro';
+import ThemeModeTwo from '../themeModeTwo/ThemeModeTwo.astro';
+import DownLoadResume from '../../components/downLoadCurriculum/DownLoadResume.astro';
 ---
 
 <header class="header-style">
@@ -12,11 +13,12 @@ import ThemeMode from '../themeMode/ThemeMode.astro';
 			alt="William photo"
 		/>
 		<nav class="nav-style">
+			<DownLoadResume />
 			<a href="#">Home</a>
 			<a href="#about">About</a>
 			<a href="#projects">Projects</a>
 			<a href="#contact">Contact</a>
-			<ThemeMode />
+			<ThemeModeTwo />
 		</nav>
 	</div>
 	<div class="mobile-menu" >

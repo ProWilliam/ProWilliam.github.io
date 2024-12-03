@@ -21,6 +21,12 @@ ProWilliam.github.io/
 │   │   ├── badge/
 │   │   │   ├── Badge.astro
 │   │   │   └── Badge.css
+│   │   ├── buttonAnimated/
+│   │   │   ├── ButtonAnimated.astro
+│   │   │   └── ButtonAnimatedStyles.css
+│   │   ├── downLoadCurriculum/
+│   │   │   ├── DownLoadCurriculum.astro
+│   │   │   └── DownLoadCurriculumStyles.css
 │   │   ├── form/
 │   │   │   ├── Form.astro
 │   │   │   └── FormStyle.css
@@ -33,9 +39,14 @@ ProWilliam.github.io/
 │   │   ├── socialMedia/
 │   │   │   ├── SocialMedia.astro
 │   │   │   └── SocialMediaStyle.css
-│   │   └── themeMode/
-│   │       ├── ThemeMode.astro
-│   │       └── ThemeModeStyle.css
+│   │   ├── themeMode/
+│   │   │   ├── ThemeMode.astro
+│   │   │   └── ThemeModeStyle.css
+│   │   └── themeModeTwo/
+│   │       ├── ThemeModeTwo.astro
+│   │       └── ThemeModeTwoStyle.css
+│   ├── icons/
+│   │   └── Resume.pdf
 │   ├── icons/
 │   │   ├── about-me.svg
 │   │   ├── close.svg

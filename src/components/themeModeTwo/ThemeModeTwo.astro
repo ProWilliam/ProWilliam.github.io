@@ -1,0 +1,38 @@
+---
+import './ThemeModeTwoStyles.css';
+---
+
+<label for="switch" class="switch">
+  <input id="switch" type="checkbox" />
+  <span class="slider-theme-mode"></span>
+  <span class="decoration"></span>
+</label>
+
+<script>
+  const checkMode = document.getElementById('switch');
+  const body = document.querySelector('body');
+
+  load();
+
+  checkMode?.addEventListener('change', () => {
+    body?.classList.toggle('theme-dark');
+    const valueMode = body?.classList.contains("theme-dark") 
+                      ? 'true' : "false";
+    store(valueMode);
+  });
+
+  function load() {
+    const darkmode = localStorage.getItem('theme-dark');
+
+    if(darkmode == "false"){
+      store('false');
+    }else if(darkmode == "true") {
+      body?.classList.add("theme-dark");
+    }
+  }
+
+  function store(theme: string) {
+    localStorage.setItem('theme-dark', theme);
+  }
+
+</script>
